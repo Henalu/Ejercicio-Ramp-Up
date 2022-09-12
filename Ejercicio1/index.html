@@ -9,20 +9,23 @@
 </head>
 
 <body>
-    <section>
+    <!--Contenedor general-->
+    <section id="general">
+        <!--Cabecera-->
         <header id="cabecera">
             <h1>Ejercicio 1</h1>
         </header>
 
+        <!--Menu-->
         <nav>
             <ul>
-                <li>Menu</li>
-                <li>Contenido</li>
-                <li>Info</li>
-                <li>Contacto</li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contenido</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-
+        <!--barra lateral-->
         <aside>
             <div>
                 <form action="none">
@@ -39,7 +42,7 @@
             </div>
 
         </aside>
-
+        <!--Contenido principal-->
         <article id="contenido">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut arcu tortor. In vehicula quis quam id
                 tempor. Phasellus fermentum suscipit ipsum nec posuere. Maecenas eu semper velit. Quisque varius, lectus
@@ -74,11 +77,36 @@
 
         <article id="definiciones">
             <dl>
-                <dt>HTML</dt>
+                <dt><em>HTML</em></dt>
                 <dd>Estructura y contenido de nuestra web</dd>
+
+                <dt><em>CSS</em></dt>
+                <dd>Hoja de estilos en cascada</dd>
             </dl>
         </article>
 
+        <article>
+            <table border="1">
+                <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>Java</th>
+                </tr>
+                <tr>
+                    <td>esqueleto</td>
+                    <td>apariencia</td>
+                    <td>musculos</td>
+                </tr>
+                <tr>
+                    <td colspan="3">WEB</td>
+                </tr>
+               
+            </table>
+
+
+        </article>
+
+        <!--Pie de pagina-->
         <footer>
             Todos los derechos reservados &copy <a href="#">Henalu Paes de Barros</a>
         </footer>
