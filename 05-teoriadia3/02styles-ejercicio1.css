@@ -1,0 +1,65 @@
+
+h1, h2, h3 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 { 
+    color: blue; 
+}
+
+h2 { 
+    color: #F00; 
+
+}
+h3 { 
+    color: rgb(0,255,0); 
+}
+
+/*Selector de Clase
+.destacado { 
+    color: red; 
+}
+*/
+
+/*Selector de ID
+#destacado { 
+    color: red; 
+}
+*/
+
+/*Selector descendente
+p span { 
+    color: red; 
+} 
+
+p span a {
+    color: black;
+}
+*/
+
+
+/*En el primer caso se aplica el estilo a los em dentro de span dentro de a dentro de p. 
+En cambio el segundo ejemplo aplica el estilo a todos los em, span, a y p*/
+p a span em { 
+    color: gray; 
+}
+/*
+p, a, span, em { 
+    color:blueviolet; 
+}
+ */
+/*El asterisco en medio de ambas nos dice que elijamos los <a> que estan a segundo nivel, 
+es decir, los que esten dentro de un <span> dentro de <p> por ejemplo y los que estén justo antes los olvida*/
+p * a { 
+    color: red !important; 
+}
+
+/*selector de clase*/
+p .resaltado { 
+    color:aquamarine; 
+    font-size: large;
+}
+p.destacado { 
+    color:rgb(57, 122, 100); 
+    font-size: large;
+}
