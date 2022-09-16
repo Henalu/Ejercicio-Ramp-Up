@@ -1,0 +1,54 @@
+/*Selector Hijo*/
+p>a {
+    color: red;
+}
+
+/*Selector Adyacente, selecciona al elemento que tenemos justo al lado del primer elemento y que sea del mismo nivel, es decir un 
+elemento hermano*/
+h2 {
+    color: green;
+}
+
+h1+h2 {
+    color: blue;
+}
+
+/*Selector de Atributo*/
+
+a[id] {
+    color: green;
+}
+
+a[class="externo"] {
+    color: yellow;
+}
+
+a[href="http://www.ejemplo.com"] {
+    color: purple;
+}
+
+a[class~="abajo"] {
+    color: orange;
+}
+
+*[lang=en] {
+    color: brown;
+}
+
+*[lang|="es"] {
+    color: red
+}
+
+/*Herencia*/
+body {
+    color: blue;
+    font-family: Arial;
+}
+
+p {
+    font-family: cursive;
+}
+
+span {
+    color: red;
+}

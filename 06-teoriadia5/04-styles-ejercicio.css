@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+body{
+    width: 1250px;
+    margin: 0px auto;
+}
+
+#contenedor-general{
+    margin-left: 330px;
+    margin-right:330px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/*Titulos y Parrafos*/
+h1#titulo {
+    color: #048483;
+    margin:10px;
+}
+
+p>strong {
+    color: #FE2920;
+}
+
+.destacado {
+    color: #FDC467;
+}
+
+h2#subtitulo {
+    color: blue;
+    margin:10px;
+}
+
+p a[href="#"] {
+    color: red;
+}
+
+p a[href="#"] em {
+    color: blue;
+}
+
+p .especial {
+    color: #AA67BC;
+}
+
+/*Tabla*/
+
+table{
+    margin: 10px;
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+table th, td{
+    border: 1px solid black;
+    padding: 10px; 
+}
+
+th{
+    color: red;
+}
+
+th.especial{
+    color: yellow;
+}
+
+td {
+    color: green;
+}
+
+th + td > strong{
+    color: yellow;
+} 
+
+td em {
+    color: green;
+} 
+
+caption {
+    color: blue;
+    margin-bottom: 3px;
+}
+
+
+/*Parrafos finales*/
+#adicional p{
+   color: #AAAA58;
+}
+
+#adicional p span{
+    color: #AAAA58;
+}
+
+#adicional #especial{
+    color: #FE52FE;
+}
+
+#adicional a[href="#"]{
+    color: green;
+}
