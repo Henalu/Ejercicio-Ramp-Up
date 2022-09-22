@@ -76,7 +76,7 @@ function cantidadAsteriscos() {
 function ejercicio2() {
     cantidadAsteriscos();
     for (var i = 0; i < contadorAsteriscos; i++) {
-        asteriscos[i] = ['*'];
+        asteriscos = asteriscos + ['*'];
         alert(asteriscos);
     }
     asteriscos = [''];
@@ -103,7 +103,7 @@ function cantidadSimbolos() {
 function ejercicio3() {
     cantidadSimbolos();
     for (i = 0; i < contadorSimbolos; i++) {
-        simbolos[i] = ['*+_'];
+        simbolos = simbolos + ['*+_'];
         alert(simbolos);
     }
     contadorSimbolos = ['']; // Para que el contador se reinicie y podamos repetir desde cero cada vez que apretamos el boton ;)
@@ -150,10 +150,12 @@ function elegirElementos() {
 function ejercicio4() {
     elegirElementos();
     for (i = 0; i < contadorTriangulo; i++) {
-        elementosTriangulo[i] = ['\n *'];
-        alert(elementosTriangulo);
+        for (j = 0; j <= i; j++) {
+            elementosTriangulo = elementosTriangulo + '*';
+        }
+        elementosTriangulo = elementosTriangulo + '\n';
     }
-    elementosTriangulo = ['*'];
+    alert(elementosTriangulo);
 }
 
 // 5. Una función que devuelva la diferencia en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)
@@ -231,6 +233,9 @@ function contadorDias() {
         case 'diciembre':
             diaDelAño = (dia + 330);
             break;
+        default:
+            diaDelAño = 0;
+            break;
     }
 
     return diaDelAño;
@@ -298,6 +303,9 @@ function contadorDias2() {
         case 'diciembre':
             diaDelAño2 = (dia + 330);
             break;
+        default:
+            diaDelAño2 = 0;
+            break;
     }
 
     return diaDelAño2;
@@ -305,34 +313,44 @@ function contadorDias2() {
 
 function fecha1() { //Engloba tres funciones dentro de ella
     elegirDia();
-    elegirMes();
-    contadorDias();
-    alert('La primera fecha elegida se corresponde al dia '+ dia + ' del mes de ' + mes + ' que equivale al dia del año: ' + diaDelAño)
+    do {
+        elegirMes();
+        contadorDias();
+        if(diaDelAño==0){
+            alert('Por favor escriba correctamente el mes, ejemplo: enero')
+        }
+    } while(diaDelAño==0) //Así evitamos que puedas escribir mal el mes
+    alert('La primera fecha elegida se corresponde al dia ' + dia + ' del mes de ' + mes + ' que equivale al dia del año: ' + diaDelAño)
 }
 
 function fecha2() { //Engloba tres funciones dentro de ella
     elegirDia2();
+    do{
     elegirMes2();
     contadorDias2();
-    alert('La segunda fecha elegida se corresponde al dia '+ dia2 + ' del mes de ' + mes2 + ' que equivale al dia del año: ' + diaDelAño2)
+    if(diaDelAño2==0){
+        alert('Por favor escriba correctamente el mes, ejemplo: enero')
+    }
+    }while(diaDelAño2==0)
+    alert('La segunda fecha elegida se corresponde al dia ' + dia2 + ' del mes de ' + mes2 + ' que equivale al dia del año: ' + diaDelAño2)
 }
 
 function ejercicio5() { //Funcion Final que engloba las anteriores unas dentro de otras.
     fecha1();
     fecha2();
 
-    if(diaDelAño>diaDelAño2){
+    if (diaDelAño > diaDelAño2) {
         var resultado = (diaDelAño - diaDelAño2);
-        diferencia=resultado;
+        diferencia = resultado;
         alert('Hay una diferencia de ' + diferencia + ' dias entre la primera fecha elegida y la segunda');
-    }else if (diaDelAño2>diaDelAño){
+    } else if (diaDelAño2 > diaDelAño) {
         var resultado = (diaDelAño2 - diaDelAño);
-        diferencia=resultado;
+        diferencia = resultado;
         alert('Hay una diferencia de ' + diferencia + ' dias entre la segunda fecha elegida y la primera');
-    }else{
-        alert ('ambas fechas se corresponden al mismo día del año');
+    } else {
+        alert('ambas fechas se corresponden al mismo día del año');
         diferencia = 0;
     }
 
-    
+
 }
