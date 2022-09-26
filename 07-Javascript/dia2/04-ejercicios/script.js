@@ -159,8 +159,6 @@ function ejercicio4() {
 }
 
 // 5. Una función que devuelva la diferencia en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)
-var año = 360;
-var mesesDelAño = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']; //me gustaria añadir que si el usuario introduce mal el dia del mes no lo acepte y vuelva a pedirlo, pero no se como hacerlo con un array. 
 var diaDelAño = 0;
 var dia = 0;
 var mes = [''];
@@ -176,8 +174,10 @@ function elegirDia() {
         var seleccionarDia = parseInt(prompt('Introduce el día del mes:'));
         if (isNaN(seleccionarDia)) {
             alert('por favor introduce correctamente el día del mes');
+        }else if (seleccionarDia > 30){
+            alert('por favor introduce correctamente el día del mes');
         }
-    } while (isNaN(seleccionarDia));
+    } while (isNaN(seleccionarDia) || seleccionarDia > 30);
 
     dia = seleccionarDia;
     return dia;
@@ -246,8 +246,10 @@ function elegirDia2() {
         var seleccionarDia = parseInt(prompt('Introduce el día del mes:'));
         if (isNaN(seleccionarDia)) {
             alert('por favor introduce correctamente el día del mes');
+        }else if (seleccionarDia > 30){
+            alert('por favor introduce correctamente el día del mes');
         }
-    } while (isNaN(seleccionarDia));
+    } while (isNaN(seleccionarDia) || seleccionarDia > 30);
 
     dia2 = seleccionarDia;
     return dia2;
@@ -268,40 +270,40 @@ function elegirMes2() {
 function contadorDias2() {
     switch (mes2) {
         case 'enero':
-            diaDelAño2 = dia;
+            diaDelAño2 = dia2;
             break;
         case 'febrero':
-            diaDelAño2 = (dia + 30);
+            diaDelAño2 = (dia2 + 30);
             break;
         case 'marzo':
-            diaDelAño2 = (dia + 60);
+            diaDelAño2 = (dia2 + 60);
             break;
         case 'abril':
-            diaDelAño2 = (dia + 90);
+            diaDelAño2 = (dia2 + 90);
             break;
         case 'mayo':
-            diaDelAño2 = (dia + 120);
+            diaDelAño2 = (dia2 + 120);
             break;
         case 'junio':
-            diaDelAño2 = (dia + 150);
+            diaDelAño2 = (dia2 + 150);
             break;
         case 'julio':
-            diaDelAño2 = (dia + 180);
+            diaDelAño2 = (dia2 + 180);
             break;
         case 'agosto':
-            diaDelAño2 = (dia + 210);
+            diaDelAño2 = (dia2 + 210);
             break;
         case 'septiembre':
-            diaDelAño2 = (dia + 240);
+            diaDelAño2 = (dia2 + 240);
             break;
         case 'octubre':
-            diaDelAño2 = (dia + 270);
+            diaDelAño2 = (dia2 + 270);
             break;
         case 'noviembre':
-            diaDelAño2 = (dia + 300);
+            diaDelAño2 = (dia2 + 300);
             break;
         case 'diciembre':
-            diaDelAño2 = (dia + 330);
+            diaDelAño2 = (dia2 + 330);
             break;
         default:
             diaDelAño2 = 0;
